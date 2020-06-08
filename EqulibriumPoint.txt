@@ -1,0 +1,34 @@
+package com.czarina;
+//https://www.geeksforgeeks.org/equilibrium-index-of-an-array/
+public class EqulibriumPoint {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {1,3,5,2,2};
+
+Boolean flag=true;
+for(int i=0;i<a.length;i++)
+{
+	 int lsum=0,	 rsum=0;
+	for(int j=i-1;j>=0;j--)
+	{
+		lsum+=a[j];
+	}
+	for(int j=i+1;j<a.length;j++)
+	{
+		rsum+=a[j];
+	}
+	if(lsum==rsum)
+	{
+		flag=false;
+		System.out.println("The equilibrium  point is " + a[i]);
+		break;
+	}
+}
+if(flag)
+{
+	System.out.println("No equlibirum");
+}
+	}
+
+}

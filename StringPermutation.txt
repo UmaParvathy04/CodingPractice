@@ -1,0 +1,31 @@
+package com.u;
+
+public class StringPermutation {
+	static String swap(String str, int l, int r) {
+		char temp;
+		char c[] = str.toCharArray();
+		temp = c[l];
+		c[l] = c[r];
+		c[r] = temp;
+		return String.valueOf(c);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "uma";
+		int n = str.length();
+		permute(str, 0, n - 1);
+	}
+
+	static void permute(String s, int l, int r) {
+
+		if (l == r) {
+			System.out.println(s);
+		} else {
+			for (int i = l; i <= r; i++) {
+				String swaped = swap(s, l, i); // swap it with itself
+				permute(swaped, l + 1, r); // again permute from next ele till end
+			}
+		}
+	}
+}

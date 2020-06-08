@@ -1,0 +1,33 @@
+package com.czarina;
+
+public class ReverseArrayInGrups {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= { 1,2,3,4,5,6};
+int k=4;
+int n=a.length-1;
+for(int i=0;i<n;i+=k)
+{
+	int l=i;
+	int r=l+k-1;
+	if(r>=a.length-1)
+	{
+		r=a.length-1;
+	}
+while(l<r)
+	{
+		int temp=a[l];
+		a[l]=a[r];
+		a[r]=temp;
+		l++;
+		r--;
+	}
+}
+for(int j:a)
+{
+	System.out.print(j + " ");
+}
+	}
+
+}

@@ -1,0 +1,34 @@
+
+public class RevVowels {
+	static String checkVowel(String str1)
+	{
+		char[] str=str1.toCharArray();
+		String vowel="";
+		int j=0;
+		for(int i=0;i<str.length;i++)
+		{
+			if((str[i]=='a') || (str[i]=='e') ||(str[i]=='i') ||(str[i]=='o' ) ||(str[i]=='u' ) )
+			{
+				j++;
+			vowel+=str[i];
+			}
+		}
+		for(int i=0;i<str.length;i++)
+		{
+			if((str[i]=='a') || (str[i]=='e') ||(str[i]=='i') ||(str[i]=='o' ) ||(str[i]=='u' ) )
+				str[i]=vowel.charAt(--j);
+		}
+		/*for(int i=0;i<str.length;i++)
+		{
+			System.out.print(str[i]);
+		}*/
+		return String.valueOf(str);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str1="Practice";
+		System.out.print(checkVowel(str1));
+	}
+
+}

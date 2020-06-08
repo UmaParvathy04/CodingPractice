@@ -1,0 +1,40 @@
+package com.shelbie;
+
+public class FreqOfLimitedRange {
+	public static void findFrequency(int[] a,int n)
+	{
+		int i=0;
+		while(i<n)
+		{
+			while(a[i]<=0)
+		{
+				i++;
+				continue;
+			}
+			int eleIndex= a[i]-1;
+			if(a[eleIndex]>0)
+			{
+			a[i]=a[eleIndex];
+				a[eleIndex]=-1;
+		}
+			else
+			{
+				a[eleIndex]--;
+				a[i]=0;
+				i++;
+			}
+		}
+	for(int j=0;j<a.length;j++)
+		//for(int j:a)
+		{   //
+			System.out.println( j+1 +"--->" + Math.abs(a[j]));
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+				int[] A =  {2,4,1,1,2,1};
+				findFrequency(A,A.length);
+	}
+}
+

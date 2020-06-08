@@ -1,0 +1,58 @@
+package com.shelbie;
+
+import java.util.Scanner;
+
+public class SumOfTwoLargeNo {
+	static int digit(int num)
+	{
+		int digit=0;
+		while(num>0)
+		{
+				digit++;
+				num/=10;
+				}
+		return digit;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int x = 260;
+		int y = 1000;
+		int sum = x + y;
+		if (digit(sum) == digit(x)) {
+			System.out.println(sum);
+		} else {
+			System.out.println(x);
+		}
+	}
+}
+
+//Scanner sc= new Scanner(System.in);
+//System.out.println("Enter num1");
+//int a= sc.nextInt();
+//System.out.println("Enter num2");
+//int b= sc.nextInt();
+//int z= a+b;
+//int r;
+//int cz=0;
+//int dupZ= z;
+//while(dupZ>0)
+//{
+//	r=dupZ%10;
+//	cz++;
+//	dupZ=dupZ/10;
+//}
+//int ca=0;
+//int dupA= a;
+//while(dupA>0)
+//{
+//	r=dupA%10;
+//	ca++;
+//	dupA=dupA/10;
+//}
+//if(ca==cz)
+//{
+//	System.out.println(" sum is =="+ z);
+//}
+//else
+//	System.out.println("num is ==" +  a);
+//	}

@@ -1,0 +1,20 @@
+import java.util.Arrays;
+//https://www.geeksforgeeks.org/count-triplets-such-that-one-of-the-numbers-can-be-written-as-sum-of-the-other-two/
+public class CountTriplets {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = { 3, 2, 7, 5 };
+		Arrays.sort(a);
+		int c = 0;
+		for (int i = 0; i < a.length - 2; i++) {
+			if (a[i] + a[i + 1] == a[i + 2]) {
+				c++;
+				System.out.println(a[i] + "+" + a[i + 1] + "=" + a[i + 2]);
+			}
+
+		}
+		System.out.print(c);
+	}
+
+}

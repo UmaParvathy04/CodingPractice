@@ -1,0 +1,22 @@
+package com.Nairobi;
+
+public class RemoveAllOccuranceOfCharFromString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String s= "zohozoho";
+char a[]=s.toCharArray();
+int j=0,count =0;
+for(int i=0;i<s.length();i++)
+{
+	if(a[i]!='o')
+	{
+		a[j++]=a[i];
+	}
+}
+ 
+for(int i=0;i<j;i++) {
+	System.out.print(a[i]);
+}
+	}
+}

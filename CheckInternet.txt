@@ -1,0 +1,20 @@
+import java.net.URL;
+import java.net.URLConnection;
+public class CheckInternet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+try
+{
+	URL url= new URL("https://google.com");
+	URLConnection con=url.openConnection();
+	con.connect();
+	System.out.println("Internet conn Available");
+}
+catch(Exception e)
+{
+	System.out.println("no internt");
+}
+	}
+
+}

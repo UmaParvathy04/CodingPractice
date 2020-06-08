@@ -1,0 +1,66 @@
+vpackage com.Salva;
+class Nod{
+
+	int data;
+	Nod next;
+}
+public class FindMiddleLinkList {
+
+	Nod head;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+FindMiddleLinkList list= new FindMiddleLinkList();
+list.insert(12);
+list.insert(22);
+list.insert(45);
+list.insert(67);
+list.show();
+list.findMiddleEle();
+	}
+	public void insert(int data)
+	{
+		Nod node= new Nod();
+		node.data=data;
+		node.next=null;
+		if(head==null)
+		{
+			head=node;
+		}
+		else
+		{
+		Nod n=head;
+		while(n.next!=null)
+		{
+			n=n.next;
+		}
+		n.next=node;
+		}
+	}
+	public void show()
+	{
+		Nod n=head;
+		while(n.next!=null)
+		{
+			System.out.println(n.data);
+			n=n.next;
+		}
+		System.out.println(n.data);
+	}
+
+	public void findMiddleEle()
+	{
+		int count=0;
+		Nod n=head;
+		while(n.next!=null)
+		{
+			count++;
+			n=n.next;
+		}
+		Nod n1=head;
+		for(int i=0;i<count/2;i++)
+		{
+			n1=n1.next;
+		}
+		System.out.println("Middle element is: " + n1.data);	
+	}
+}

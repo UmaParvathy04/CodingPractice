@@ -1,0 +1,30 @@
+package com.u;
+
+public class RemoveDupAdjacent {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String str="geeksforgeeks";
+char c[]=str.toCharArray();
+int i=0;
+String res="";
+while(c[i]<str.length()-1)
+{
+	if(c[i]==c[i+1])
+	{
+		res+=c[i];
+		i++;
+	}
+	if(c[i]<str.length()-1 && c[i]==c[i+1])
+	{
+		while(c[i]==c[i+1])
+		{
+			i++;
+		}
+		i++;
+	}
+}
+System.out.println(res);
+	}
+}
+

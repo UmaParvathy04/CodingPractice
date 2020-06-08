@@ -1,0 +1,27 @@
+package com.bby;
+
+public class SmallestGreatestEleInWholeArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= { 1,13,4,6,3};
+for(int i=0;i<a.length;i++)
+{
+	int n=Integer.MAX_VALUE;
+	for(int j=0;j<a.length;j++)
+	{
+		if(a[i]<a[j] && n>a[j])
+		{
+			n=a[j];
+		}
+	}
+	if(n!=Integer.MAX_VALUE)
+	{
+		System.out.print(n+ " ");
+	}
+	else
+	System.out.print("_ ");
+}
+	}
+
+}

@@ -1,0 +1,31 @@
+
+//https://www.geeksforgeeks.org/sort-binary-array-using-one-traversal/
+package com.czarina;
+
+import java.util.Arrays;
+
+public class BinarySorting {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[]= {1,0,1,0,1,1};
+		int l =0,r=a.length-1;
+		while(l<r)
+		{
+			while(a[l]==0)
+			{
+				l++;
+			}
+			while(a[r]==1 && l<r)
+			{
+				r--;
+			}
+			if(l<r)
+			{
+				int temp=a[l];
+			a[l]=a[r];
+			a[r]=temp;
+		}
+		}
+		System.out.println(Arrays.toString(a));
+	}
+}

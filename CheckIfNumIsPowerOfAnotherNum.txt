@@ -1,0 +1,25 @@
+package com.shelbie;
+
+public class CheckIfNumIsPowerOfAnotherNum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int x=10; 
+int y=1000;
+System.out.println(ispower(x,y));
+	}
+	static Boolean ispower(int x,int y)
+	{
+		if(x==y)
+		{
+			return(y==1);
+		}
+		int pow=1;
+		while(pow<y)
+		{
+			pow=pow*x;
+		}
+		return (pow==y);
+	}
+
+}

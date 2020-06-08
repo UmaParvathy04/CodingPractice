@@ -1,0 +1,26 @@
+//https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
+public class kadane { 
+	//max sum subarray
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {-2, -3, 4, -1, -2, 1, 5, -3};
+int max= maxSubArray(a);
+System.out.print(max);
+	}
+	public static int maxSubArray(int a[])
+	{
+		int max_endHere=0; 
+		int max_till= 0;
+		for(int i=0;i<a.length;i++)
+		{
+			max_endHere=max_endHere+a[i];
+			if(max_endHere>max_till)
+			{
+				max_till=max_endHere;
+			}
+			if(max_endHere<0)
+				max_endHere=0;
+		}
+		return max_till;
+	}
+}

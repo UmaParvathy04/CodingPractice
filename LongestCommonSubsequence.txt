@@ -1,0 +1,40 @@
+package com.czarina;
+
+import java.util.HashSet;
+
+public class LongestCommonSubsequence {
+static void Longest(int a[],int n)
+{
+	HashSet<Integer> hashset= new HashSet<>();
+	for(int i=0;i<n;i++)
+	{
+		hashset.add(a[i]);	
+	}
+	int count=0;
+	for(int i=0;i<n;i++)
+	{
+		if(!hashset.contains(a[i]-1))
+		{
+			int j=a[i];
+			while(hashset.contains(j))
+			{
+				j++;
+			}
+			j=j-a[i];
+			
+			if(j>count)
+			{
+				count =j;
+			}
+		}	
+	}
+	System.out.println("The longest common subsequence is "+ count);
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {1,9,3,10,4,20,2};
+int n=a.length;
+Longest(a,n);
+	}
+
+}

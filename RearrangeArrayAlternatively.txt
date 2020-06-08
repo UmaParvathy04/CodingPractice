@@ -1,0 +1,35 @@
+package com.czarina;
+//https://www.geeksforgeeks.org/rearrange-array-maximum-minimum-form/
+import java.util.Arrays;
+
+public class RearrangeArrayAlternatively {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {1,5,2,4,6};
+Arrays.sort(a);
+int l=0;
+int r=a.length-1;
+Boolean flag=true;
+int temp[]=new int[a.length];
+for(int i=0;i<a.length;i++)
+{
+	if(flag==true)
+	{
+		temp[i]=a[r];
+		r--;
+	}
+	if(flag==false)
+	{
+		temp[i]=a[l];
+		l++;
+	}
+	flag=!flag;
+}
+for(int i=0;i<a.length;i++)
+{
+	System.out.print(temp[i]+ " ");
+}
+	}
+
+}

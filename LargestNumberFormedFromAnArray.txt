@@ -1,0 +1,42 @@
+package com.u;
+
+import java.util.*;
+
+//https://practice.geeksforgeeks.org/problems/largest-number-formed-from-an-array/0
+
+public class LargestNumberFormedFromAnArray {
+
+	public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+		list.add("54");
+		list.add("548");
+		list.add("546");
+		list.add("60"); 
+        printLargest(list); 	
+	}
+
+	private static void printLargest(List<String> list) 
+	{
+		Collections.sort(list, new Comparator<String>() {
+
+			@Override
+			public int compare(String x, String y)
+			{
+				String xy=x+y;
+				String yx=y+x;
+//				System.out.println(x+ " "+ xy +" "+ yx +" "+list.toString());
+				return xy.compareTo(yx)>0?-1:1;
+				
+			}
+		});
+	
+		
+		 //System.out.println(list.toString());
+		 
+		Iterator<String> it = list.iterator(); 
+		  
+		    while(it.hasNext()) 
+		        System.out.print(it.next()); 
+	}
+
+}

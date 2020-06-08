@@ -1,0 +1,26 @@
+package com.Helsinki;
+
+public class TrappingRainWater {
+static int callFn(int a[])
+{
+	if(a==null|| a.length==0)
+	{
+		return 0;
+	}
+	int l=0,r=a.length-1;
+	int res=0,level=0;
+	while(l<r)
+	{
+		int lower=a[a[l]<a[r]? l++:r--];
+		level= Math.max(level, lower);
+		res+=level-lower;
+	}
+	return res;
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {3,0,0,2,0,4};
+System.out.println(callFn(a));
+	}
+
+}

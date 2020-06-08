@@ -1,0 +1,30 @@
+package com.czarina; //https://www.geeksforgeeks.org/find-index-of-an-extra-element-present-in-one-sorted-array/
+
+public class IndexExtraEle {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int a[]= {2,4,6,8,10,12,13};
+int b[]= {2,4,6,8,10,12};
+int index=b.length;
+int l=0;
+int r=b.length-1;
+
+while(l<=r)
+{
+	int m= (l+r)/2;
+	if(a[m]==b[m])
+	{
+		l=m+1;
+	}
+	else 
+	{
+		index=m;
+		r=m-1;
+	}
+}
+System.out.println(index);
+
+	}
+
+}
